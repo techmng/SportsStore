@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html ng-app="sportsStore">
+ <head>
+  <title>Sports Store </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <link href="bootstrap.css" rel="stylesheet" />  
+  <link href="bootstrap-theme.css" rel="stylesheet" /> 
+  <script src="angular.min.js" language="javascript"/>
+  <script></script>
+  <script src="./controllers/sportsStore.js"></script>
+
+ </head>
+
+ <body  ng-controller="sportsStoreController" >
+  <div class="container">
+    <div name="header" class="panel pannel-default"></div>
+	<div name="navbar" class="navbar navbar-inverse">
+	 <a class="navbar-brand" href="#">SportsStore</a>
+	</div>
+    
+	<div class="col-xs-3"> Category Go here</div>
+	<div class="col-xs-8"> 
+	   <div class="well" ng-repeat="item in data.products">
+	   <h3>
+	    <strong>{{item.name}}</strong>
+		<span class="pull-right label label-primary"> {{item.price|currency}}</span>
+	   </h3>
+	    <span class="lead">{{item.description}}</span>
+	   </div>
+	</div>
+  </div> <!--Container Ends Here---->
+  
+ </body>
+</html>
